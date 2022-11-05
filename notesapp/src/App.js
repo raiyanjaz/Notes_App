@@ -1,12 +1,12 @@
-import './App.css';
+import './app.css';
 import Header from './components/header'
-import Body from './components/body'
+import NotesList from './pages/notesListPage'
 
 function App() {
   return (
     <div className="App">
       <Header />
-      <Body />
+      <NotesList />
     </div>
   )
 }
