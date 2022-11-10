@@ -1,4 +1,4 @@
-import './app.css';
+import './App.css';
 import Header from './components/header'
 import NotesList from './pages/notesListPage'
 
@@ -10,5 +10,5 @@ function App() {
     </div>
   )
 }
-//Test commit
+
 export default App;
