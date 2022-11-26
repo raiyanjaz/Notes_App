@@ -1,12 +1,12 @@
 import './App.css';
-import Header from './components/header'
-import NotesList from './pages/notesListPage'
+import Sidebar from './sidebar.js';
+import Main from './main.js';
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      <NotesList />
+      <Sidebar />
+      <Main />
     </div>
   )
 }
