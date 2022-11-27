@@ -1,4 +1,4 @@
-function sidebar({notes, onAddNote}) {
+function sidebar({notes, onAddNote, onDeleteNote}) {
     return (
         <div className="app-sidebar">
             <div className="app-sidebar-header">
@@ -9,12 +9,16 @@ function sidebar({notes, onAddNote}) {
                 {notes.map((note) => (
                     <div className="app-sidebar-note">
                         <div className="sidebar-note-title">
-                            <strong> Title </strong>
-                            <button> Delete </button>
+                            <strong> {note.title} </strong>
+                            <button onClick={() => onDeleteNote(note.id)}> Delete </button>
                         </div>
-                        <p> Note Preview </p>
+                        <p> {note.body && note.body.substr(0, 100) + "..."} </p>
                         <small className="note-meta"> 
-                            Last modified [insert_date]
+                            Last modified{" "} 
+                            {new Date(note.lastModified).toLocaleDateString("en-GB",{
+                                hour: "2-digit",
+                                minute: "2-digit",
+                            })}
                         </small>
                     </div>
                 ))}
