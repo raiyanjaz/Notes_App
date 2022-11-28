@@ -29,4 +29,4 @@ function sidebar({notes, onAddNote, onDeleteNote, activeNote, setActiveNote}) {
     )
 }
 
-export default sidebar;
+export default sidebar; 
