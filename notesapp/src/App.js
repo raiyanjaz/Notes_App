@@ -4,7 +4,8 @@ import Sidebar from './sidebar.js';
 import Main from './main.js';
 
 function App() {
-  const [notes, setNotes] = useState([])
+  const [notes, setNotes] = useState([]);
+  const [activeNote, setActiveNote] = useState(false);
 
   const onAddNote = () => {
     const newNote = {
@@ -19,16 +20,20 @@ function App() {
 
   const onDeleteNote = (idToDelete) => {
     setNotes(notes.filter((note) => note.id !== idToDelete))
-  }
+  };
 
   return (
     <div className="App">
       <Sidebar 
         notes={notes} 
         onAddNote={onAddNote}
-        onDeleteNote={onDeleteNote} 
+        onDeleteNote={onDeleteNote}
+        activeNote={activeNote}
+        setActiveNote={setActiveNote}
       />
-      <Main />
+      <Main 
+        activeNote={activeNote}
+      />
     </div>
   )
 }
