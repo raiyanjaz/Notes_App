@@ -1,7 +1,9 @@
 function SideHeader() {
     return (
-        <div>
-            
+        <div className="app-sideHeader">
+            <div className="sideHeader-header">
+                <button className="profile">P</button>
+            </div>
         </div>
     )
 }
