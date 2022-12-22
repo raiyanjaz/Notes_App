@@ -1,4 +1,4 @@
-function main({activeNote, onUpdateNote}) {
+function Main({activeNote, onUpdateNote}) {
     const onEditField = (key, value) => {
         onUpdateNote({
             ...activeNote,
@@ -36,4 +36,4 @@ function main({activeNote, onUpdateNote}) {
     )
 }
 
-export default main;
+export default Main;

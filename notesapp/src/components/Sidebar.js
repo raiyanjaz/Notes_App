@@ -1,4 +1,4 @@
-function sidebar({notes, onAddNote, onDeleteNote, activeNote, setActiveNote}) {
+function Sidebar({notes, onAddNote, onDeleteNote, activeNote, setActiveNote}) {
     return (
         <div className="app-sidebar">
             <div className="app-sidebar-header">
@@ -29,4 +29,4 @@ function sidebar({notes, onAddNote, onDeleteNote, activeNote, setActiveNote}) {
     )
 }
 
-export default sidebar; 
+export default Sidebar; 

@@ -1,7 +1,7 @@
 import {useState} from "react"
 import './App.css';
-import Sidebar from './sidebar.js';
-import Main from './main.js';
+import Sidebar from './components/Sidebar.js';
+import Main from './components/Main.js';
 
 function App() {
   const [notes, setNotes] = useState([]);
