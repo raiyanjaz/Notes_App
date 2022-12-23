@@ -14,7 +14,7 @@ body,
     height: 100vh;
     overflow: hidden;
     font-size: 16px;
-    background: #fcfcfc;
+    background: #E2E2E2;
 }
 
 button {
@@ -35,12 +35,28 @@ button:hover {
     display: flex;
 }
 
+::-webkit-scrollbar {
+    width: 5px;
+}
+  
+::-webkit-scrollbar-track {
+    background: null;
+}
+  
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
 /* SIDEBAR STYLES */
 
 .app-sidebar {
     width: 25%;
     height: 100vh;
-    border-right: 1px solid #ddd;
+    background-color: #BBBAC6;
 }
   
     .app-sidebar-header {
@@ -56,6 +72,7 @@ button:hover {
         height: calc(100vh - 78px);
         overflow-y: scroll;
     }
+
     .app-sidebar-note {
         padding: 25px;
         cursor: pointer;
@@ -152,8 +169,7 @@ button:hover {
 .app-sideHeader {
     width: 90px;
     height: 100vh;
-    border-right: 1px solid #ddd;
-    background-color: rgb(152, 180, 219);
+    background-color: #545E75
 }
 
     .sideHeader-header {

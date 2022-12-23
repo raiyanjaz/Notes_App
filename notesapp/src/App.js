@@ -1,12 +1,22 @@
 import {useState} from "react"
 
-import './App.css';
+import './styles/App.css';
+import './styles/ProfileView.css'
 
-import Sidebar from './components/Sidebar.js';
-import Main from './components/Main.js';
+import ProfileView from "./components/ProfileView";
+import Sidebar from './components/Sidebar';
+import Main from './components/Main';
 import SideHeader from "./components/SideHeader";
 
 function App() {
+  
+  // Opening the profile view
+  const [openProfileView , setProfileView] = useState(false);
+
+  const profileViewOpen = () => setProfileView(true);   
+  
+
+  // Adding notes in the note sidebar
   const [notes, setNotes] = useState([]);
   const [activeNote, setActiveNote] = useState(false);
 
@@ -21,6 +31,7 @@ function App() {
     setNotes([newNote, ...notes]);
   };
 
+  // Updating notes in the note sidebar
   const onUpdateNote = (updatedNote) => {
     const updatedNotesArray = notes.map((note) => {
       if(note.id === activeNote) {
@@ -31,6 +42,7 @@ function App() {
     setNotes(updatedNotesArray);
   };
 
+  // Deleting notes in the note sidebar
   const onDeleteNote = (idToDelete) => {
     setNotes(notes.filter((note) => note.id !== idToDelete))
   };
@@ -39,9 +51,22 @@ function App() {
     return notes.find((note) => note.id === activeNote);
   };
 
+  if (openProfileView) { // When profile picture is clicked, only sideheader and profile view will be open
+    return (
+      <div className="App">
+        <SideHeader 
+          onClick={profileViewOpen}
+        />
+        <ProfileView />
+      </div>
+    )
+  } 
+
   return (
     <div className="App">
-      <SideHeader />
+      <SideHeader 
+        onClick={profileViewOpen}
+      />
       <Sidebar 
         notes={notes} 
         onAddNote={onAddNote}
@@ -55,6 +80,7 @@ function App() {
       />
     </div>
   )
+  
 }
 
 export default App;
