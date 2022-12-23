@@ -1,0 +1,12 @@
+/* Profile View */
+
+.app-profile-view {
+    width: 70%;
+    height: 100vh;
+    background-color: black;
+}
+    
+    .profile-view {
+        border: 1px solid #ddd;
+        background-color: green;
+    }
