@@ -173,11 +173,21 @@ button:hover {
 }
 
     .sideHeader-header {
-        display: flex;
-        justify-content: space-between;
-        padding: 25px;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        padding-left: 19px;
     }
 
     .profile {
-        border-radius: 20px;
+        background-color: #E2E2E2;
+        border: none;
+        border-radius: 100%;
+        padding: 26px;
+        margin-right: 45px;
+    }
+
+    hr {
+        background-color: #E2E2E2;
+        width: 52px;
+        margin-right: 45px;
     }
