@@ -1,0 +1,82 @@
+.log-in-section {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: "Poppins";
+    width: 100%;
+    height: 100vh;
+    background: #E2E2E2;
+}
+
+.log-in-text {
+    position: absolute;
+    width: 100vw;
+    height: 90px;
+    top: 30vh;
+
+    text-align: center;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 48px;
+    color: #000000;
+}
+
+.form-container {
+    position: absolute;
+    width: 320px;
+    height: 180px;
+    top: 50vh;
+    right: 50vw;
+
+    text-align: center;
+}
+
+.log-in-form {
+    position: absolute;
+    width: 200%;
+    height: 27.22%;
+}
+
+::placeholder {
+    position: absolute;
+    left: 1.88%;
+    right: 62.5%;
+    top: 22.92%;
+    bottom: 22.92%;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    color: #C4C4C4;
+}
+
+input {
+    position: absolute;
+    left: 1.88%;
+    right: 62.5%;
+    top: 22.92%;
+    bottom: 22.92%;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    color: #000000;
+}
+
+.email-textbox {
+    box-sizing: border-box;
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: -157.14%;
+    bottom: 159.18%;
+    background: #FAFAFA;
+    border: 1px solid #D0D0D0;
+    border-radius: 10px;
+    padding-left: 1.88%;
+    outline: none; 
+}
+
+.

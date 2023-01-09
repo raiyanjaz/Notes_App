@@ -12,10 +12,9 @@ function App() {
   
   // Opening the profile view
   const [openProfileView , setProfileView] = useState(false);
-
   const profileViewOpen = () => setProfileView(true);   
-  
 
+  
   // Adding notes in the note sidebar
   const [notes, setNotes] = useState([]);
   const [activeNote, setActiveNote] = useState(false);
@@ -62,6 +61,7 @@ function App() {
     )
   } 
 
+  // Returns general view
   return (
     <div className="App">
       <SideHeader 
