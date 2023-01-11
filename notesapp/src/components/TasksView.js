@@ -1,4 +1,4 @@
-function ProfileView() {
+function TasksView() {
     return (
         <div className="profile-view">
             <div className="">
@@ -8,4 +8,4 @@ function ProfileView() {
     )
 }
 
-export default ProfileView;
+export default TasksView;

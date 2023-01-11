@@ -1,22 +1,32 @@
-import {useState} from "react"
+import { useState } from "react"
 
 import './styles/App.css';
 import './styles/Header.css'
 import './styles/ProfileView.css'
-
+import './styles/LogInView.css'
 
 import ProfileView from "./components/ProfileView";
 import Sidebar from './components/Sidebar';
 import Main from './components/Main';
 import Header from "./components/Header";
+import LogInView from './components/LogInView';
+import TasksView from "./components/TasksView";
 
 function App() {
-  
-  // Opening the profile view
-  const [openProfileView , setProfileView] = useState(false);
-  const profileViewOpen = () => setProfileView(true);   
 
-  
+  // Opening the note view
+  const [openNotesView, setNotesView] = useState(false);
+  const notesViewOpen = () => setNotesView(true);
+
+  // Opening the task view
+  const [openTasksView, setTasksView] = useState(false);
+  const tasksViewOpen = () => setTasksView(true);
+
+  // Opening the profile view
+  const [openProfileView, setProfileView] = useState(false);
+  const profileViewOpen = () => setProfileView(true);
+
+
   // Adding notes in the note sidebar
   const [notes, setNotes] = useState([]);
   const [activeNote, setActiveNote] = useState(false);
@@ -35,7 +45,7 @@ function App() {
   // Updating notes in the note sidebar
   const onUpdateNote = (updatedNote) => {
     const updatedNotesArray = notes.map((note) => {
-      if(note.id === activeNote) {
+      if (note.id === activeNote) {
         return updatedNote;
       }
       return note;
@@ -52,37 +62,63 @@ function App() {
     return notes.find((note) => note.id === activeNote);
   };
 
-  if (openProfileView) { // When profile picture is clicked, only sideheader and profile view will be open
+  // Returns Note View
+  if (openNotesView) {
     return (
       <div className="App">
-        <Header 
-          onClick={profileViewOpen}
+        <Header
+          notesClick={notesViewOpen}
+          tasksClick={tasksViewOpen}
+          profileClick={profileViewOpen}
+        />
+        <Sidebar
+          notes={notes}
+          onAddNote={onAddNote}
+          onDeleteNote={onDeleteNote}
+          activeNote={activeNote}
+          setActiveNote={setActiveNote}
+        />
+        <Main
+          activeNote={getActiveNote()}
+          onUpdateNote={onUpdateNote}
+        />
+      </div>
+    )
+  }
+
+  // Returns Tasks View
+  if (openTasksView) {
+    return (
+      <div className="App">
+        <Header
+          notesClick={notesViewOpen}
+          tasksClick={tasksViewOpen}
+          profileClick={profileViewOpen}
+        />
+        <TasksView />
+      </div>
+    )
+  }
+
+  // Returns Profile View
+  if (openProfileView) {
+    return (
+      <div className="App">
+        <Header
+          notesClick={notesViewOpen}
+          tasksClick={tasksViewOpen}
+          profileClick={profileViewOpen}
         />
         <ProfileView />
       </div>
     )
-  } 
+  }
 
-  // Returns general view
   return (
     <div className="App">
-      <Header 
-        onClick={profileViewOpen}
-      />
-      <Sidebar 
-        notes={notes} 
-        onAddNote={onAddNote}
-        onDeleteNote={onDeleteNote}
-        activeNote={activeNote}
-        setActiveNote={setActiveNote}
-      />
-      <Main 
-        activeNote={getActiveNote()} 
-        onUpdateNote={onUpdateNote}
-      />
+      <LogInView onClick={notesViewOpen} />
     </div>
   )
-  
 }
 
 export default App;
