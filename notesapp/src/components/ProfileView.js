@@ -1,7 +1,9 @@
 function ProfileView() {
     return (
-        <div className="app-profile-view">
-            
+        <div className="profile-view">
+            <div className="">
+                
+            </div>
         </div>
     )
 }

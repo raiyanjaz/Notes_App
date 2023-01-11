@@ -1,0 +1,98 @@
+/* Header View */
+
+.main-header {
+    position: fixed;
+    width: 100vw;
+    height: 70px;
+    background: #545E75;
+    box-shadow: 2px 2px 5px #545E75;
+}
+
+ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+li {
+    list-style: none;
+    padding: 0;
+}
+
+.notes-button {
+    position: relative;
+    width: 100px;
+    height: 35px;
+    font-size: 20px;
+    text-align: center;
+    color: #F5F5F5;
+    display: block;
+    transition: 0.3s;
+}
+
+.tasks-button {
+    position: relative;
+    width: 100px;
+    height: 35px;
+    font-size: 20px;
+    text-align: center;
+    color: #F5F5F5;
+    display: block;
+    transition: 0.3s;
+}
+
+.profile-button {
+    position: relative;
+    width: 100px;
+    height: 35px;
+    font-size: 20px;
+    text-align: center;
+    color: #F5F5F5;
+    display: block;
+    transition: 0.3s;
+}
+
+.notes-button:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -19px;
+    width: 0;
+    height: 3px;
+    background-color: #F5F5F5;
+    transition: width 0.25s ease-out;
+}
+
+.notes-button:hover:before {
+    width: 100%;
+}
+
+.tasks-button:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -19px;
+    width: 0;
+    height: 3px;
+    background-color: #F5F5F5;
+    transition: width 0.25s ease-out;
+}
+
+.tasks-button:hover:before {
+    width: 100%;
+}
+
+.profile-button:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -19px;
+    width: 0;
+    height: 3px;
+    background-color: #F5F5F5;
+    transition: width 0.25s ease-out;
+}
+
+.profile-button:hover:before {
+    width: 100%;
+}

@@ -1,12 +1,14 @@
 import {useState} from "react"
 
 import './styles/App.css';
+import './styles/Header.css'
 import './styles/ProfileView.css'
+
 
 import ProfileView from "./components/ProfileView";
 import Sidebar from './components/Sidebar';
 import Main from './components/Main';
-import SideHeader from "./components/SideHeader";
+import Header from "./components/Header";
 
 function App() {
   
@@ -53,7 +55,7 @@ function App() {
   if (openProfileView) { // When profile picture is clicked, only sideheader and profile view will be open
     return (
       <div className="App">
-        <SideHeader 
+        <Header 
           onClick={profileViewOpen}
         />
         <ProfileView />
@@ -64,7 +66,7 @@ function App() {
   // Returns general view
   return (
     <div className="App">
-      <SideHeader 
+      <Header 
         onClick={profileViewOpen}
       />
       <Sidebar 
